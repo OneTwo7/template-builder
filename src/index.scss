@@ -1,0 +1,100 @@
+$white: #fff;
+$grey: #888;
+
+body {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.app {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .elements {
+        max-width: 300px;
+        margin-right: 20px;
+        padding: 20px;
+        flex: 1 1 100%;
+        border: 1px solid $grey;
+        border-radius: .5rem;
+    }
+
+    .template {
+        max-width: calc(100% - 320px);
+        min-height: 400px;
+        padding: 20px;
+        flex: 1 1 100%;
+        border: 1px solid $grey;
+        border-radius: .5rem;
+    }
+
+    .preview {
+        width: 100%;
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid $grey;
+        border-radius: .5rem;
+
+        h2 {
+            margin-top: 0;
+        }
+
+        &-input {
+            margin-bottom: 20px;
+
+            label {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            input {
+                padding: 10px 15px;
+                border: 1px solid $grey;
+                border-radius: .5rem;
+                font-size: .8rem;
+            }
+        }
+    }
+
+    .input {
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid $grey;
+        border-radius: .5rem;
+        background-color: $white;
+        text-transform: capitalize;
+    }
+
+    .template-input {
+        width: 350px;
+        margin-bottom: 20px;
+        padding: 10px 20px;
+        border: 1px solid $grey;
+        border-radius: .5rem;
+        background-color: $white;
+
+        &-group:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: inline-block;
+            width: 100px;
+            margin-right: 5px;
+        }
+
+        input {
+            padding: 10px 15px;
+            border: 1px solid $grey;
+            border-radius: .5rem;
+            font-size: .8rem;
+        }
+    }
+}
