@@ -21,12 +21,18 @@ function App() {
                 label: 'Input Text',
                 placeholder: 'Placeholder',
             },
+            {
+                id: 'input-2',
+                hasLabel: true,
+                type: 'slider',
+                label: 'Select a value',
+            },
         ],
         template: {
             numberOfInputs: 3,
             inputs: [],
         },
-        nextInputId: 2,
+        nextInputId: 3,
     });
 
     function onDragEnd(result) {

@@ -1,6 +1,17 @@
 export default function TemplateInput(props) {
     const { innerRef, input, onChange, ...innerProps } = props;
 
+    if (input.type === 'slider') {
+        return (
+            <div className="template-input" ref={innerRef} {...innerProps}>
+                <div className="template-input-group">
+                    <label htmlFor={`label-${input.id}`}>Label:</label>
+                    <input id={`label-${input.id}`} type="text" value={input.label} onChange={onChange} />
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="template-input" ref={innerRef} {...innerProps}>
             <div className="template-input-group">
