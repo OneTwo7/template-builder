@@ -8,6 +8,27 @@ export default function TemplateInput(props) {
                     <label htmlFor={`label-${input.id}`}>Label:</label>
                     <input id={`label-${input.id}`} type="text" value={input.label} onChange={onChange} />
                 </div>
+                <div className="template-input-group">
+                    <label htmlFor={`min-${input.id}`}>Min:</label>
+                    <input id={`min-${input.id}`} type="number" value={input.min} onChange={onChange} />
+                </div>
+                <div className="template-input-group">
+                    <label htmlFor={`max-${input.id}`}>Max:</label>
+                    <input id={`max-${input.id}`} type="number" value={input.max} onChange={onChange} />
+                </div>
+                <div className="template-input-group">
+                    <label htmlFor={`step-${input.id}`}>Step:</label>
+                    <input id={`step-${input.id}`} type="number" value={input.step} onChange={onChange} />
+                </div>
+                <div className="template-input-group">
+                    <label htmlFor={`defaultValue-${input.id}`}>Default value:</label>
+                    <input
+                        id={`defaultValue-${input.id}`}
+                        type="number"
+                        value={input.defaultValue}
+                        onChange={onChange}
+                    />
+                </div>
             </div>
         );
     }

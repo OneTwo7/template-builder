@@ -1,4 +1,4 @@
-import Slider from 'rc-slider';
+import SliderPreview from './SliderPreview';
 
 export default function Preview({ inputs }) {
     return (
@@ -9,10 +9,10 @@ export default function Preview({ inputs }) {
                     return (
                         <div key={input.id} className="preview-input">
                             {input.label.trim() && <label htmlFor={input.id}>{input.label}</label>}
-                            <Slider id={input.id} min={0} max={120} />
+                            <SliderPreview input={input} />
                             <div className="preview-input-slider-values">
-                                <div className="preview-input-slider-values--min">0</div>
-                                <div className="preview-input-slider-values--max">120</div>
+                                <div className="preview-input-slider-values--min">{input.min}</div>
+                                <div className="preview-input-slider-values--max">{input.max}</div>
                             </div>
                         </div>
                     );

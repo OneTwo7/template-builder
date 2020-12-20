@@ -26,6 +26,10 @@ function App() {
                 hasLabel: true,
                 type: 'slider',
                 label: 'Select a value',
+                min: 0,
+                max: 120,
+                step: 1,
+                defaultValue: 0,
             },
         ],
         template: {
